@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { LoansService } from './loans.service';
 import { CreateLoanDto } from './dto/create-loan.dto';
 
+
 @Controller('loans')
 export class LoansController {
     constructor(private readonly loansService: LoansService) {}

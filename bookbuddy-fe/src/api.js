@@ -39,7 +39,8 @@ export const api = {
     // loans
     loanBook: (body) => request("/loans", { method: "POST", body: JSON.stringify(body) }),
     getLoans: () => request("/loans"),
-    returnLoan: (id) => request(`/loans/${id}/return`, { method: "PATCH" }),
+    returnLoan: (loanId) =>
+        request(`/loans/${loanId}/return`, { method: "PATCH" }),
 
     // reviews
     getReviewsForBook: (bookId) => request(`/reviews/book/${bookId}`),
